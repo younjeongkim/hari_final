@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="QnaReply">
+
+<!--    10-21 jihan 수정, qNo추가-->
+    <insert id="qnaReplyInsert" parameterType="qnaReply">
+        INSERT INTO tb_reply (qNo,userId, rContent)
+        VALUES (${qNo},#{userId},#{rContent})
+    </insert>
+
+    <select id="qnaReplySelect" parameterType="qnaReply" resultType="qnaReply">
+        SELECT qNo,userId,rContent FROM tb_reply
+        WHERE qNo=${qNo}
+        order by rNo desc
+    </select>
+
+    <update id="qnaReplyUpdate" parameterType="qnaReply">
+        UPDATE tb_reply
+        SET rContent = #{rContent}
+        WHERE rNo = ${rNo}
+    </update>
+
+    <delete id="qnaReplyDelete">
+        DELETE FROM tb_reply
+        WHERE rNo = ${rNo}
+    </delete>
+</mapper>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Order">
+    <select id="orderMenu" resultType="ShopMenuDTO">
+        SELECT mNo, bId, mName, mImg, mPrice, mContent, mType, mStatus
+        from tb_menu
+        WHERE bId = #{bId}
+        order by mDate asc
+    </select>
+
+    <select id="getBNameById" resultType="string">
+        SELECT bName FROM tb_business WHERE bId = #{bId}
+    </select>
+
+    <select id="getMenuDetailByMNo" parameterType="String" resultType="ShopMenuDTO">
+        SELECT * FROM tb_menu WHERE mNo = #{mNo}
+    </select>
+<!--    10-24-jihan수정-->
+    <select id="getMenuDetailByMName" parameterType="String" resultType="ShopMenuDTO">
+        SELECT * FROM tb_menu WHERE mName = #{mName}
+
+<!--        SELECT * FROM tb_menu-->
+<!--        WHERE bId = #{bId} AND mName-->
+<!--            IN (-->
+<!--                SELECT mName FROM tb_menu-->
+<!--                WHERE mName = #{mName}-->
+<!--        );-->
+    </select>
+
+    <!-- 여긴 장바구니 -->
+    <!-- 장바구니 추가 -->
+    <insert id="addBasket">
+        insert into tb_basket ( userId, mNo, mCnt, temperature, created_at)
+        values ( #{userId}, #{mNo}, #{mCnt}, #{temperature}, #{created_at})
+    </insert>
+<!--    10-24 jihan 음성장바구니 추가되게하기-->
+    <insert id="addBasketForApi">
+        insert into tb_basket (userId, mNo, temperature, mCnt, created_at)
+        values ( #{userId}, #{mNo}, #{temperature}, #{mCnt}, #{created_at})
+    </insert>
+    <!--    보여주기 리스트-->
+    <select id="basketList" resultType="BasketListDTO">
+        SELECT
+        b.basNo, b.userId, b.mNo, b.mCnt, b.temperature,
+        m.mName, m.mPrice, m.mImg
+        FROM tb_basket b
+        INNER JOIN tb_menu m ON b.mNo = m.mNo
+        WHERE b.userId = '${userId}'
+        ORDER BY b.basNo DESC;
+    </select>
+
+    <!--    &lt;!&ndash; 장바구니 삭제 &ndash;&gt;-->
+<!--    <delete id="delBasket">-->
+<!--        delete baskett-->
+<!--        where c_no = #{c_no}-->
+<!--        and userid =#{userid}-->
+<!--    </delete>-->
+
+<!--    <insert id="insertOrder" parameterType="OrderDTO">-->
+<!--        insert into order_list (odNo, oNo, mNo, mCnt)-->
+<!--        values (#{odNo}, #{oNo}, #{mNo}, #{mCnt})-->
+<!--    </insert>-->
+    <!--    오더디테일-->
+    <insert id="insertOrderDetail" parameterType="OrderDetailDTO">
+        INSERT INTO tb_order_detail (oNo, userId, totalAmount, discountAmount, payAmount, created_at, oState)
+        VALUES (#{oNo}, #{userId}, #{totalAmount}, #{discountAmount}, #{payAmount}, #{created_at}, #{oState})
+    </insert>
+
+    <select id="getProductFromBasket" resultType="BasketListDTO">
+        SELECT *
+        FROM products
+        WHERE mNo = #{mNo} AND temperature = #{temperature}
+    </select>
+
+    <select id="getProductByMnoAndTemperature" resultType="BasketListDTO">
+        SELECT b.basNo, b.userId, b.mNo, b.mCnt, b.temperature,
+        m.mName, m.mPrice, m.mImg
+        FROM tb_basket AS b
+        INNER JOIN tb_menu AS m ON b.mNo = m.mNo
+        WHERE b.mNo = #{mNo} AND b.temperature = #{temperature}
+    </select>
+
+    <delete id="clearBasket">
+        DELETE FROM tb_basket
+        WHERE userId = #{userId}
+    </delete>
+
+</mapper>

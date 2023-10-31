@@ -1,0 +1,185 @@
+body{
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav{
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.navIcon{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.loginIcon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+
+}
+
+.MenuListPageContainer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.MenuListContainer{
+    padding: 10px;
+
+}
+.MenuListBox{
+    border-style: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+}
+
+
+.MenuListPageTitle{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.MenuCard{
+    width: 140px;
+    height: auto;
+    border-color: #0DA2AB;
+    background-color:#ffff;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    margin: 5px;
+
+}
+.imgSec{
+    display: flex;
+    justify-content: center;
+
+}
+.MenuThumb{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+}
+
+.MenuExText{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+li{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    height: 15px;
+}
+
+span.price{
+    justify-content: right ;
+}
+
+span.MenuScript{
+    white-space : nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100px;
+}
+
+.MenuCardSec{
+    width: 170px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    margin: 5px;
+}
+.MenuCardList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+
+}
+
+
+
+.cardCheckBox{
+    display: flex;
+    align-items: center;
+
+}
+.ButtonSec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.delMemu{
+    width: 150px;
+    height: 50px;
+    color:#ffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    background-color: #0DA2AB;
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+a{
+    text-decoration-line: none;
+
+}
+
+@media (max-width: 480px) {
+
+    .MenuListPageTitle {
+        padding: 10px;
+        font-size: 24px;
+    }
+    .MenuListBox {
+        width: 95%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 360px){
+    .MenuListContainer {
+        width: 360px;
+        height: auto;
+        padding: 10px;
+
+    }
+
+    .MenuListPageTitle {
+        padding: 10px;
+        font-size: 24px;
+    }
+}

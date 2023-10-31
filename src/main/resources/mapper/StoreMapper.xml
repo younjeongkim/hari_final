@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Store">
+    <select id="findStoresNearby" resultType="java.util.Map">
+        <![CDATA[
+        SELECT bId, bName, bCategory FROM tb_business
+        WHERE (6371 *
+            ACOS(COS(RADIANS(#{lat})) * COS(RADIANS(bLatitude)) *
+            COS(RADIANS(bLongitude) - RADIANS(#{lon})) +
+            SIN(RADIANS(#{lat})) * SIN(RADIANS(bLatitude))))
+            <= #{radiusKm}
+        ]]>
+    </select>
+
+<!--    10-19 JiHan-->
+<!--    <select id="findStoresNearby" resultType="java.util.Map">-->
+<!--        <![CDATA[-->
+<!--    SELECT bId, bName, bCategory FROM tb_business-->
+<!--        WHERE (6371 *-->
+<!--        ACOS(COS(RADIANS(#{lat})) * COS(RADIANS(bLatitude)) *-->
+<!--        COS(RADIANS(bLongitude) - RADIANS(#{lon})) +-->
+<!--        SIN(RADIANS(#{lat})) * SIN(RADIANS(bLatitude))))-->
+<!--        <= #{radiusKm}-->
+<!--    ]]>-->
+<!--    </select>-->
+
+<!--    10-24 jihan 재수정-->
+<!--    <select id="findStoresNearby" resultType="java.util.Map">-->
+<!--        <![CDATA[-->
+<!--    (-->
+<!--        SELECT bId, bName, bCategory,-->
+<!--            (6371 *-->
+<!--            ACOS(COS(RADIANS(#{lat})) * COS(RADIANS(bLatitude)) *-->
+<!--            COS(RADIANS(bLongitude) - RADIANS(#{lon})) +-->
+<!--            SIN(RADIANS(#{lat})) * SIN(RADIANS(bLatitude))))-->
+<!--        AS distance,-->
+<!--        0 as sort_order-->
+<!--        FROM tb_business-->
+<!--        WHERE bId IN ('stbuckR', 'twopl', 'holly123', 'stbuck', 'dunk')-->
+<!--        AND (6371 *-->
+<!--            ACOS(COS(RADIANS(#{lat})) * COS(RADIANS(bLatitude)) *-->
+<!--            COS(RADIANS(bLongitude) - RADIANS(#{lon})) +-->
+<!--            SIN(RADIANS(#{lat})) * SIN(RADIANS(bLatitude))))-->
+<!--        <= #{radiusKm}-->
+<!--    )-->
+<!--    UNION ALL-->
+<!--    (-->
+<!--        SELECT bId, bName, bCategory,-->
+<!--           (6371 *-->
+<!--           ACOS(COS(RADIANS(#{lat})) * COS(RADIUSANs(bLatitude)) *-->
+<!--           COS(radiansBLongitude) - RAdIAns(lon)) +-->
+<!--           sin(radians(lat))) sin(radians(latitude)))-->
+<!--       AS distance,-->
+<!--       1 as sort_order-->
+<!--       FROM tb_business-->
+<!--       WHERE bId NOT IN ('stbuckR', 'twopl', 'holly123', 'stbuck', 'dunk')-->
+<!--       AND (6371 *-->
+<!--           ACOS(COS(RADIANs(lat))) * cos(radIANs(latitude)) *-->
+<!--           cos(radIANs(longitude) - radIANs(lon)) +-->
+<!--           sin(radIANs(lat))) sin(radIANs(latitude)))-->
+<!--       <= #{radiusKm}-->
+<!--   )-->
+<!--   ORDER BY sort_order ASC-->
+<!--   ]]>-->
+<!--    </select>-->
+
+
+
+</mapper>

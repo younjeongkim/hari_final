@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Shop">
+    <insert id="shopInsert" parameterType="shop">
+        INSERT INTO tb_business (bId, bPwd, bEmail, bOwner, bPhone, bName, bNo, bAddr, bCategory, bLatitude, bLongitude)
+        VALUES (#{bId}, #{bPwd}, #{bEmail}, #{bOwner}, #{bPhone}, #{bName}, #{bNo}, #{bAddr}, #{bCategory}, #{bLatitude}, #{bLongitude})
+    </insert>
+
+    <select id="shopSelect" parameterType="shop" resultType="shop">
+        SELECT bId, bName from tb_business WHERE bId = #{bId} AND bPwd = #{bPwd}
+    </select>
+
+    <select id="shopSelectOne" parameterType="String" resultType="shop">
+        SELECT * FROM tb_business
+        WHERE bId = #{bId}
+    </select>
+
+    <update id="shopUpdate" parameterType="shop">
+        UPDATE tb_business SET bPwd = #{bPwd}, bEmail = #{bEmail}, bOwner = #{bOwner}, bPhone = #{bPhone}, bName = #{bName}, bNo = #{bNo}, bAddr = #{bAddr}, bCategory = #{bCategory}
+        WHERE bId = #{bId}
+    </update>
+
+<!--    2023-10-13-jihan-->
+    <insert id="shopMenuInsert" parameterType="shop">
+        INSERT INTO tb_menu ( bId, mName, mImg, mPrice, mContent, mType)
+        VALUES ( #{bId}, #{mName}, #{mImg}, #{mPrice}, #{mContent}, #{mType})
+    </insert>
+    <!--    메뉴 등록-->
+    <select id="shopMenuList" parameterType="String" resultType="ShopMenuDTO">
+        SELECT mNo, bId, mName, mImg, mPrice, mContent, mType, mStatus
+        from tb_menu
+        WHERE bId = #{bId}
+        order by mDate desc
+    </select>
+
+    <!-- 메뉴 삭제 -->
+    <delete id="shopMenuDelete">
+        delete from tb_menu
+        where mNo = #{mNo}
+        and bId = #{bId}
+    </delete>
+</mapper>

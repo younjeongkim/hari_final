@@ -1,0 +1,258 @@
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav{
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.navIcon{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+}
+.loginIcon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+
+}
+.pageContainer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.pwdSearchContainer{
+    padding: 10px;
+    width: 480px;
+
+}
+
+.pageTitle{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+
+}
+
+.pwdSearchBoxBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.switchSec{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.switchText{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    color: #0DA2AB;
+    margin: 0 10px 0 10px;
+}
+
+
+.pwdSearchBox{
+    border-style: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.inputBox{
+    border-color: #0DA2AB;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.inputBoxLine{
+    background:#0DA2AB;
+    border-width: 0;
+    height: 1px;
+    margin: 1px;
+
+
+}
+.Row{
+    display: flex;
+    flex-direction: row;
+}
+.icon{
+    width: 15px;
+    height: 15px;
+    margin: 15px;
+}
+.inputRow{
+    border-style: none;
+    width: 96%;
+    padding: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #949494;
+    margin: 2px;
+
+}
+
+.pwdSearchButton{
+    width: 100%;
+    display: block;
+    color:#ffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    background-color: #0DA2AB;
+    border-radius: 10px;
+    border-style: none;
+    padding: 15px 0 15px;
+
+}
+
+.pwdSearchBoxBottom{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #949494;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+a{
+    text-decoration-line: none;
+    color: #949494;
+    margin: 0 10px 0 10px;
+}
+
+a:hover{
+    color: #2196F3;
+    cursor: pointer;
+}
+
+
+@media (max-width: 360px){
+    .pwdSearchContainer {
+        width: 98%;
+        height: auto;
+    }
+
+    .pageTitle{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 800;
+        font-size: 16px;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+    .pwdSearchBox {
+        width: 98%;
+        height: auto;
+    }
+
+    .pageTitle{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 800;
+        font-size: 16px;
+
+    }
+
+    .pwdSearchBoxBottom{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .pageTitle{
+        font-size: 26px;
+    }
+    .pwdSearchBoxBar{
+        display: block;
+    }
+
+}

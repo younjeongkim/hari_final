@@ -1,0 +1,89 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav{
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.navIcon{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.loginIcon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+
+}
+
+
+.boardContainer{
+    padding: 10px;
+    justify-content: center;
+}
+
+.boardWriteContainer{
+    padding: 10px;
+
+}
+.boardWriteBox{
+    border-style: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.boardPageTitle{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.boardWriteTitle{
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+
+}
+
+.boardWriteContent{
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 8em;
+    resize: none;
+}
+
+button{
+    width: 70px;
+    height: 30px;
+    border-color: #0DA2AB;
+    background-color: #ffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 10px;
+
+}

@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+
+body {
+
+  -webkit-animation: chameleon 19s infinite;
+  animation: chameleon 19s infinite;
+}
+
+ul{
+  display: flex;
+  text-align: center;
+}
+li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 20px;
+
+}
+
+a{
+  text-decoration: none;
+  color: #ffff;
+}
+
+.logo{
+  color: #ffff;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  flex-wrap:wrap;
+  height: 300px;
+  position:relative;
+
+}
+
+.homeMenuBox{
+  padding: 10px;
+}
+
+.homeMenu{
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  top: 100px;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.outline {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 500px;
+}
+
+.waves {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.4);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.waves:before, .waves:after {
+  content: "";
+  position: absolute;
+  background: white;
+  margin-left: -12px;
+  margin-top: -12px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-animation: wave 3s infinite linear;
+  animation: wave 3s infinite linear;
+}
+.waves:after {
+  opacity: 0;
+  -webkit-animation: wave 3s 1.5s infinite linear;
+  animation: wave 3s 1.5s infinite linear;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(3.5);
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(3.5);
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes chameleon {
+  0% {
+    background: #2ecc71;
+  }
+  25% {
+    background: #0DA2AB;
+  }
+  50% {
+    background: #2ecc71;
+  }
+  75% {
+    background: #3498db;
+  }
+  100% {
+    background: #2ecc71;
+  }
+}
+@keyframes chameleon {
+  0% {
+    background: #2ecc71;
+  }
+  25% {
+    background: #0DA2AB;
+  }
+  50% {
+    background: #2ecc71;
+  }
+  75% {
+    background: #3498db;
+  }
+  100% {
+    background: #2ecc71;
+  }
+}
+
+@media (max-width: 480px) {
+
+}

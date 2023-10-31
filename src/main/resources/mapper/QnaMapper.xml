@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Qna">
+    <insert id="qnaWrite" parameterType="qna">
+        INSERT INTO tb_qna (userId, subject, content, qnaFile)
+        VALUES (#{userId}, #{subject}, #{content}, #{qnaFile})
+    </insert>
+
+    <select id="totalRecord" resultType="int">
+        SELECT count(qNo) cnt FROM tb_qna
+        <if test="searchWord != null">
+            WHERE ${searchKey} LIKE CONCAT('%', #{searchWord}, '%')
+        </if>
+    </select>
+
+    <select id="qnaList" resultType="qna">
+        SELECT qNo, userId, subject, content, qnaFile, created_at as createdAt FROM tb_qna
+        <if test="searchWord != null">
+            WHERE ${searchKey} LIKE CONCAT('%', #{searchWord}, '%')
+        </if>
+        ORDER BY qNo DESC
+        LIMIT #{onePageRecord} OFFSET #{offset}
+    </select>
+
+    <select id="qnaSelect" resultType="qna">
+        SELECT qNo, userId, subject, content, qnaFile, created_at as createdAt FROM tb_qna
+        WHERE qNo = #{qNo}
+    </select>
+
+    <delete id="qnaDelete">
+        DELETE FROM tb_qna
+        WHERE qNo = #{qNo}
+    </delete>
+
+    <update id="qnaEdit">
+        UPDATE tb_qna SET subject = #{subject}, content = #{content}
+        WHERE qNo = #{qNo}
+    </update>
+</mapper>

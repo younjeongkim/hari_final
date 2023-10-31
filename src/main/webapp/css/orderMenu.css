@@ -1,0 +1,509 @@
+*{
+    margin: 0;
+}
+
+
+body{
+    margin: 40px 0 0 0 ;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 480px;
+    align-items: center;
+}
+
+
+.back{
+    background: url("../img/back.png") no-repeat;
+    width: 55px;
+    height: 55px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.home{
+    width: 55px;
+    height: 55px;
+    border-style: none;
+    cursor: pointer;
+    background: url("../img/homeWeb.png") no-repeat center;
+}
+
+.locationContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.locationBox {
+    padding: 10px;
+    width: 480px;
+}
+
+.locationText{
+    color: #0DA2AB;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.myLocation{
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+
+.myLocationText{
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 0 20px;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+li{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    vertical-align : bottom;
+
+}
+
+ul{
+    padding: 0;
+}
+
+.storeBox{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px #f1f1f1;
+}
+
+.storeImg{
+    width: 70px;
+    height: 70px;
+    background-color: #949494;
+    border-color: #949494;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 15px;
+    object-fit: cover;
+
+
+}
+
+.storeImg>img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.storeBox ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content: space-between;
+
+}
+
+.storeBox ul li {
+    margin: 0 5px 0 5px;
+
+}
+
+.storeBox ul li:nth-child(1){
+    width: 70%;
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
+}
+
+.storeBox ul li:nth-child(2){
+    width: 30%;
+    display: flex;
+    align-items: center;
+
+}
+
+.storeBoxText{
+    width: 340px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.storeName>a{
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.storeCategory{
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.mainContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.banner{
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.micBox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient( to top, #0DA2AB, #2ecc71 );
+    z-index: 100;
+}
+
+
+& button.micBoxClose {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    border:0;
+    background:transparent;
+    font-size: 24px;
+    font-weight: 400;
+    color:black;
+    cursor: pointer;
+}
+
+.micBoxClose:hover{
+    color: #f1f1f1;
+}
+
+.search{
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    max-width: 30rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.search .input-bar{
+    align-items:center;
+    background:#fff;
+    border:2px solid #0000;
+    border-radius:4rem;
+    box-sizing:border-box;
+    box-shadow:0 1rem 2rem -1.5rem #0005;
+    display:inline-flex;
+    height:4rem;
+    overflow:hidden;
+    transition:box-shadow .5s;
+    width:100%;
+}
+
+.search .input-bar input{
+    background:transparent;
+    border:0;
+    box-sizing:border-box;
+    flex:1;
+    font-size:1.25rem;
+    margin-left:.5rem;
+    min-width:8rem;
+    outline:none;
+    padding-left:1rem;
+    position:relative;
+    z-index:1;
+
+}
+
+
+
+#floatMenu {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 225px;
+    height: 50px;
+    border-radius: 30px;
+    top: 20px;
+    background-color: #0DA2AB;
+    color: #fff;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+
+
+}
+
+
+footer{
+    width: 100%;
+    height: 70px;
+    background: #0DA2AB;
+    position : fixed;
+    bottom : 0;
+
+
+}
+
+.footerText{
+    font-weight: 600;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+@keyframes pulse-red {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(255, 82, 82, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
+}
+
+.dictate{
+    margin: 70px 0 20px 0;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.orderFin{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.finButton{
+    width: 100px;
+    height: 50px;
+    background-color: #0DA2AB;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f1f1f1;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    color: #f1f1f1;
+    font-weight: 900;
+
+}
+
+.finButton:hover{
+    background-color: aquamarine;
+}
+
+
+& input.location-button {
+    background: url("../img/location.png") no-repeat;
+    padding: 0;
+    width: 45px;
+    height: 44px;
+    border-style: none;
+    cursor: pointer;
+}
+
+& input.mic-button {
+    background: url("../img/mic.png") no-repeat;
+    padding: 0;
+    width: 45px;
+    height: 44px;
+    border-style: none;
+    cursor: pointer;
+}
+
+
+.basket{
+    display: flex;
+    width: 60px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketPlus{
+    display: block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: red;
+    top: -12px;
+    left: 12px;
+}
+
+.floatingButton{
+    width: 60px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+& input.basket-button {
+    background: url("/img/basket.png") no-repeat;
+    padding: 0;
+    width: 45px;
+    height: 44px;
+    border-style: none;
+    cursor: pointer;
+}
+@media (max-width: 480px){
+
+    nav {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .locationBox {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .menuCategory {
+        width: 95%;
+    }
+
+    .storeBoxText {
+        padding: 10px;
+    }
+
+    .storeName > a {
+        color: black;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+
+    }
+
+    .storeCategory {
+        color: black;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .storeBoxText {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .storeBoxText {
+        width: 220px;
+        padding: 10px;
+    }
+
+
+
+}
+
+@media (max-width: 360px) {
+    nav {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .locationBox {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .menuCategory {
+        width: 95%;
+    }
+
+    .storeBoxText {
+        padding: 10px;
+    }
+
+    .storeName > a {
+        color: black;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+
+    }
+
+    .storeCategory {
+        color: black;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .storeBoxText {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .storeBoxText {
+        width: 220px;
+        padding: 10px;
+    }
+
+
+
+}
+

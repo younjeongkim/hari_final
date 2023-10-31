@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="com.smhrd.hari.dto.RegisterUserDTO" alias="user"></typeAlias>
+        <typeAlias type="com.smhrd.hari.dto.RegisterShopDTO" alias="shop"></typeAlias>
+        <typeAlias type="com.smhrd.hari.dto.QnaDTO" alias="qna"></typeAlias>
+
+<!--        2023-10-13-jihan-->
+        <typeAlias type="com.smhrd.hari.dto.ShopMenuDTO" alias="ShopMenuDTO"></typeAlias>
+        <typeAlias type="com.smhrd.hari.dto.BasketDTO" alias="BasketDTO"></typeAlias>
+        <typeAlias type="com.smhrd.hari.dto.BasketListDTO" alias="BasketListDTO"></typeAlias>
+        <typeAlias type="com.smhrd.hari.dto.OrderDTO" alias="OrderDTO"></typeAlias>
+        <typeAlias type="com.smhrd.hari.dto.OrderDetailDTO" alias="OrderDetailDTO"></typeAlias>
+
+<!--        2023-10-21-댓글 엘리어스-->
+        <typeAlias type="com.smhrd.hari.dto.QnaReplyDTO" alias="qnaReply"></typeAlias>
+    </typeAliases>
+</configuration>

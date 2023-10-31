@@ -1,0 +1,150 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav{
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.navIcon{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.loginIcon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+
+}
+
+.MenuWritePageContainer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.MenuWriteContainer{
+    padding: 10px;
+
+}
+.MenuWriteBox{
+    border-style: none;
+    border-radius: 10px;
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.MenuWritePageTitle{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.mBox{
+    border-color: #0DA2AB;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.formText{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.shopLocation{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #0DA2AB;
+}
+
+.mInputRow{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    width: 96%;
+    padding: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #949494;
+    margin: 2px;
+
+}
+
+.dropRow{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #949494;
+    margin: 2px;
+
+}
+
+.mwButton{
+
+    width: 100%;
+    display: block;
+    color:#ffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    background-color: #0DA2AB;
+    border-radius: 10px;
+    border-style: none;
+    padding: 15px 0 15px;
+
+}
+
+a{
+    text-decoration-line: none;
+
+}
+
+@media (max-width: 480px) {
+    .MenuWriteBox {
+        width: 98%;
+        height: auto;
+    }
+
+
+    .MenuWritePageTitle {
+
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .MenuWriteBox {
+        width: 98%;
+        height: auto;
+    }
+
+    .MenuWritePageTitle {
+
+        font-size: 24px;
+    }
+}

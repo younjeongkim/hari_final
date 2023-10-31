@@ -1,0 +1,131 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+button{
+    cursor: pointer;
+    border-style: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: black;
+    background-color: transparent;
+
+}
+
+
+.nav{
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+
+
+.loginIcon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+
+
+}
+
+.SPageContainer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.SignInContainer{
+    width: 480px;
+    padding: 10px;
+
+}
+.SignInBox{
+    border-style: none;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.navMenu{
+    display: flex;
+    flex-direction: row;
+    vertical-align: bottom;
+    height: 25px;
+
+}
+.navIcon{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin: 0;
+
+}
+
+button.Rclick{
+    background: url("../img/Rclick.png") no-repeat center;
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    cursor: pointer;
+
+
+}
+
+.navMenu span{
+    margin: 0 20px 0 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+.navMenuRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+.navMenuRow span{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: black;
+}
+
+a{
+    text-decoration-line: none;
+
+}
+
+@media (max-width: 480px) {
+
+    .SPageContainer{
+        width: 95%;
+    }
+
+
+    .navMenuRow span{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: black;
+    }}

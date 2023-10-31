@@ -1,0 +1,168 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.nav{
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.navIcon{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.loginIcon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+
+}
+
+
+.boardContainer{
+    padding: 10px;
+    justify-content: center;
+}
+
+.boardListContainer{
+    padding: 10px;
+
+}
+.boardListBox{
+    border-style: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.boardPageTitle{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.titleNButton{
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    width: 70px;
+    height: 30px;
+    border-color: #0DA2AB;
+    background-color: #ffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 10px;
+
+}
+
+
+.boardTop{
+    display: flex;
+    text-align: center;
+    padding: 15px;
+    background-color: #0DA2AB;
+    opacity: 50%;
+}
+
+.boardTopText{
+    list-style-type: none;
+    display: inline-block;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffff;
+}
+ul{
+    display: flex;
+    text-align: center;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+
+}
+li:nth-child(1){
+    width: 50%;
+    white-space : nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #efefef;
+}
+
+li:nth-child(2){
+    width: 20%;
+    white-space : nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+li:nth-child(3){
+    width: 30%;
+    white-space : nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+div>.paging{
+    display: flex;
+    justify-content: center;
+
+}
+
+ul>.pagingNum{
+    display: flex;
+    padding: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+
+
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dropRow{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+.searchBox{
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+

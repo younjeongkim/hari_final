@@ -1,0 +1,294 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav{
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.navIcon{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.loginIcon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+
+}
+
+.SPageContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.SignInContainer{
+    padding: 10px;
+    width: 480px;
+
+}
+.SignInBox{
+    border-style: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+
+}
+.SPageTitle{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+
+}
+
+.SignInTitleBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.switchSec{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.switchText{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    color: #0DA2AB;
+    margin: 0 10px 0 10px;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+.SBox{
+    border-color: #0DA2AB;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+
+.SignBoxLine{
+    background:#0DA2AB;
+    border-width: 0;
+    height: 1px;
+    margin: 1px;
+
+}
+
+
+
+.SRow{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.SRow_shopAddr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    color: #949494;
+    font-weight: 400;
+}
+
+.shopAddr{
+    margin: 0 0 0 10px;
+}
+.SRow_addr{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputAddr{
+    margin: 5px 0 5px 0;
+    padding: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+
+}
+
+.postCodeButton{
+    border: 0;
+    background-color: #0DA2AB;
+    width: 100px;
+    height: 33px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 5px;
+    color: #f1f1f1;
+}
+
+
+.SIcon{
+    width: 15px;
+    height: 15px;
+    margin: 15px;
+}
+
+.SInputRow{
+    border-style: none;
+    width: 96%;
+    padding: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #949494;
+    margin: 2px;
+
+}
+
+
+.SignInButton{
+
+    width: 100%;
+    display: block;
+    color:#ffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    background-color: #0DA2AB;
+    border-radius: 10px;
+    border-style: none;
+    padding: 15px 0 15px;
+
+}
+
+.bizSignInBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    width:100%;
+    height: auto;
+}
+
+a{
+    text-decoration-line: none;
+
+}
+
+@media (max-width:480px ) {
+    .SignInContainer{
+        width: 98%;
+    }
+
+    .SignInTitleBar{
+        display: block;
+    }
+
+    .pageTitle{
+        font-size: 30px;
+    }
+
+    .SPageTitle{
+        font-size: 24px;
+    }
+
+}
+
+
+@media (max-width: 360px) {
+    .SignInContainer{
+        width: 98%;
+    }
+
+    .SignInTitleBar{
+        display: block;
+    }
+
+    .pageTitle{
+        font-size: 30px;
+    }
+
+    .SPageTitle{
+        font-size: 24px;
+    }
+}
+
